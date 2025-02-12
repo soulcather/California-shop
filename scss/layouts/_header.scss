@@ -1,0 +1,43 @@
+.header {
+  padding: 32px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 44px;
+    &-item {
+      &-link {
+        font-family: "Inter";
+        color: $color-black;
+        text-transform: uppercase;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $bg-color-dark_green;
+        }
+      }
+    }
+    &-icons {
+      display: flex;
+      gap: 22px;
+    }
+  }
+
+  &__icon {
+    &-logo {
+      width: 170px;
+      height: 21px;
+    }
+
+    &-search,
+    &-cart {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
