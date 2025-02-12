@@ -10,12 +10,47 @@
   &__nav {
     display: flex;
     gap: 44px;
+    position: relative;
+
     &-item {
+      &:hover > ul {
+        display: block;
+      }
       &-link {
         font-family: "Inter";
         color: $color-black;
         text-transform: uppercase;
         transition: color 0.3s;
+
+        &:hover {
+          color: $bg-color-dark_green;
+        }
+      }
+    }
+
+    &-inner {
+      &-list {
+        position: absolute;
+        display: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 12px;
+      }
+
+      &-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 7px;
+        height: 25px;
+
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+      }
+
+      &-link {
+        color: $color-black;
+        transition: all 0.3s;
 
         &:hover {
           color: $bg-color-dark_green;
