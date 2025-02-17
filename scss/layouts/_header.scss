@@ -73,10 +73,60 @@
       height: 21px;
     }
 
-    &-search,
     &-cart {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    &-search {
+      cursor: pointer;
+      & > div {
+        display: inline-block;
+        position: relative;
+      }
+
+      & > div:after {
+        content: "";
+        background: #000;
+        width: 2px;
+        height: 9px;
+        position: absolute;
+        top: 19px;
+        right: 1px;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+
+      & > div > input {
+        color: black;
+        font-size: 12px;
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        border: solid 2px black;
+        outline: none;
+        border-radius: 14px;
+        transition: width 0.5s;
+        cursor: pointer;
+      }
+
+      & > div > input::placeholder {
+        color: black;
+        opacity: 0;
+        transition: opacity 150ms ease-out;
+      }
+
+      & > div > input:focus::placeholder {
+        opacity: 1;
+      }
+
+      & > div > input:focus,
+      & > div > input:not(:placeholder-shown) {
+        width: 125px;
+        cursor: auto;
+      }
     }
   }
 }
