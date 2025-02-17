@@ -1,0 +1,47 @@
+.swiper-pagination-bullet {
+  width: 194px; /* Длина полосы */
+  height: 2px; /* Толщина полосы */
+  background-color: #e0e0e0; /* Цвет неактивной полосы */
+  margin: 0 17px !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1px; /* Закругления краев (если нужно) */
+}
+
+.swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000; /* Цвет заполнения активной полосы */
+  animation: progress 5s linear forwards; /* Анимация заполнения */
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 14px; /* Устанавливаем ширину */
+  height: 26px; /* Устанавливаем высоту */
+  margin: 0 15px;
+}
+
+/* Изменение размеров стрелок внутри кнопок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 26px; /* Изменяем размер стрелки */
+  color: $color-black;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

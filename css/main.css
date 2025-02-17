@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* inter-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -18,6 +19,63 @@
   padding: 0 73px;
 }
 
+.swiper-pagination-bullet {
+  width: 194px; /* Длина полосы */
+  height: 2px; /* Толщина полосы */
+  background-color: #e0e0e0; /* Цвет неактивной полосы */
+  margin: 0 17px !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1px; /* Закругления краев (если нужно) */
+}
+
+.swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000; /* Цвет заполнения активной полосы */
+  -webkit-animation: progress 5s linear forwards;
+          animation: progress 5s linear forwards; /* Анимация заполнения */
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 14px; /* Устанавливаем ширину */
+  height: 26px; /* Устанавливаем высоту */
+  margin: 0 15px;
+}
+
+/* Изменение размеров стрелок внутри кнопок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 26px; /* Изменяем размер стрелки */
+  color: #000;
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -82,6 +140,8 @@ ul {
 
 .header {
   padding: 32px 0;
+  position: absolute;
+  width: 100%;
 }
 .header__container {
   display: -webkit-box;
@@ -103,6 +163,7 @@ ul {
 }
 .header__nav-item:hover > ul {
   display: block;
+  z-index: 2;
 }
 .header__nav-item-link {
   font-family: "Inter";
@@ -120,6 +181,7 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 12px;
+  background-color: white;
 }
 .header__nav-inner-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -151,4 +213,53 @@ ul {
 .header__icon-search, .header__icon-cart {
   width: 24px;
   height: 24px;
+}
+
+.hero-section {
+  padding: 108px 0 75px;
+}
+
+.swiper-wrapper__custom-container {
+  background-color: #dce5e2;
+  border-radius: 32px;
+}
+
+.slide-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+.slide-text {
+  padding: 0 65px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.slide-text__title {
+  font-size: 58px;
+  font-weight: 400;
+  margin-bottom: 19px;
+}
+.slide-text__description {
+  font-family: "Inter";
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.slide-text__button {
+  width: 170px;
+  height: 50px;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: "Inter";
+  border-radius: 32px;
+  border: 1px solid #000;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.slide-text__button:hover {
+  background-color: white;
 }/*# sourceMappingURL=main.css.map */

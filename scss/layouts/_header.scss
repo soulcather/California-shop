@@ -1,5 +1,7 @@
 .header {
   padding: 32px 0;
+  position: absolute;
+  width: 100%;
 
   &__container {
     display: flex;
@@ -15,6 +17,7 @@
     &-item {
       &:hover > ul {
         display: block;
+        z-index: 2;
       }
       &-link {
         font-family: "Inter";
@@ -35,6 +38,7 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         padding: 12px;
+        background-color: white;
       }
 
       &-item {
