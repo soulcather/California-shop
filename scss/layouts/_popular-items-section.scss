@@ -1,0 +1,65 @@
+.popular-items-section {
+  padding: 36px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 9px;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 31px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      width: 303px;
+      padding: 15px;
+      height: auto;
+      border-radius: 20px;
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0px 0px 30px $color-black;
+        transform: scale(1.05);
+      }
+
+      &__title {
+        font-size: 22px;
+        font-weight: 400;
+        color: $color-black;
+        margin-bottom: 9px;
+      }
+
+      &__description {
+        font-family: "Inter";
+        color: #4b4b4b;
+        margin-bottom: 25px;
+      }
+
+      &:first-child &__description {
+        margin-bottom: 35px;
+      }
+
+      &__cost {
+        font-size: 18px;
+        font-family: "Inter";
+        color: $color-black;
+        margin-bottom: 27px;
+      }
+    }
+
+    &-item img {
+      padding: 28px;
+      margin: 0 auto 37px;
+    }
+  }
+}

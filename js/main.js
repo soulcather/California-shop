@@ -1,9 +1,10 @@
 const swiper = new Swiper(".swiper", {
   loop: true, // Бесконечная прокрутка
   autoplay: {
-    delay: 5000, // Интервал между слайдами (5 секунд)
+    delay: 4000, // Интервал между слайдами (5 секунд)
     disableOnInteraction: false, // Продолжение autoplay после взаимодействия
   },
+  speed: 950,
   pagination: {
     el: ".swiper-pagination",
     clickable: true, // Возможность клика по полоскам для переключения
