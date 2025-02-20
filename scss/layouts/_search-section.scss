@@ -1,0 +1,136 @@
+.search-section {
+  padding: 36px 0;
+
+  &__title {
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input-img {
+    width: 30px;
+    height: 29px;
+  }
+
+  &-input {
+    display: block;
+    margin: 0 auto 18px;
+
+    width: 650px;
+    height: 50px;
+    background-color: #f8f9fa;
+    border: 1px solid $color-black;
+    border-radius: 30px;
+    padding: 21px 67px;
+  }
+
+  &__input-img {
+    position: absolute;
+    left: 27.5%;
+    top: 6%;
+  }
+
+  &__offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 68px;
+
+    &-container {
+      &-btn {
+        font-family: "Inter";
+        background-color: #fff;
+        border: 1px solid $color-black;
+        border-radius: 30px;
+        padding: 12px 22px;
+        cursor: pointer;
+        margin-right: 7px;
+        transition: background-color 0.3s;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background-color: $bg-color-dark_green;
+        }
+      }
+    }
+  }
+
+  &__mail-container {
+    margin: 0 auto;
+    background-color: $bg-color-dark_green;
+    width: 935px;
+    height: 450px;
+    border-radius: 16px;
+    margin-bottom: 19px;
+    padding: 47px 0 43px;
+
+    &__title {
+      text-align: center;
+      font-weight: 400;
+      font-size: 42px;
+      margin-bottom: 9px;
+    }
+
+    &__desc {
+      text-align: center;
+      font-size: 16px;
+      font-family: "Inter";
+      margin-bottom: 14px;
+    }
+
+    &__img {
+      margin: 0 auto 14px;
+      width: 233px;
+      height: 200px;
+    }
+
+    &__form {
+      position: relative;
+    }
+
+    &__input {
+      display: block;
+      margin: 0 auto;
+      width: 400px;
+      height: 50px;
+      font-family: "Inter";
+      background-color: $bg-color-dark_green;
+      border: 1px solid $color-black;
+      border-radius: 54px;
+      border-bottom-right-radius: 0px;
+      border-top-right-radius: 0px;
+      padding: 16px 0 16px 32px;
+    }
+
+    &-btn {
+      background-color: $color-black;
+      color: #fff;
+      font-family: "Inter";
+      padding: 16px 33px;
+      cursor: pointer;
+      border: 1px solid $color-black;
+      border-radius: 54px;
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0px;
+
+      position: absolute;
+      top: 0;
+      right: 26%;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #fff;
+        color: $color-black;
+      }
+    }
+  }
+}

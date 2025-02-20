@@ -1,0 +1,47 @@
+.footer {
+  border-top: 2px solid $color-black;
+  padding: 44px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    &-section {
+      &-logo {
+        margin-bottom: 18px;
+      }
+
+      &-text {
+        max-width: 304px;
+        font-size: 16px;
+        font-family: "Inter";
+      }
+
+      &-list {
+        &__title {
+          font-size: 22px;
+          margin-bottom: 19px;
+        }
+
+        &__link {
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          & a {
+            font-family: "Inter";
+            font-size: 17px;
+            color: $color-black;
+            transition: color 0.3s;
+
+            &:hover {
+              color: $bg-color-dark_green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
